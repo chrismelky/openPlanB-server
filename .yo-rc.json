@@ -25,7 +25,7 @@
     "jwtSecretKey": "8965dd37f41606f73a99f96590156012f35097df",
     "enableTranslation": true,
     "testFrameworks": [],
-    "jhiPrefix": "jhi",
+    "jhiPrefix": "",
     "clientPackageManager": "yarn",
     "nativeLanguage": "en",
     "languages": [

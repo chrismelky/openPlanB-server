@@ -1,0 +1,73 @@
+{
+    "name": "Attribute",
+    "fields": [
+        {
+            "fieldName": "uuid",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "code",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 100
+        },
+        {
+            "fieldName": "valueType",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "mandatory",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "orgUnitGroupSetAttribute",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "orgUnitGroupAttribute",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "orgUnitAttribute",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "userAttribute",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "sortOrder",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "optionSet",
+            "otherEntityName": "optionSet",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190110120253",
+    "entityTableName": "attribute",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

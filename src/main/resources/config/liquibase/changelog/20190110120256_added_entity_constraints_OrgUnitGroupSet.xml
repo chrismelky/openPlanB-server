@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity OrgUnitGroupSet.
+    -->
+    <changeSet id="20190110120256-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="org_unit_group_sets_id"
+                                 baseTableName="org_unit_group_set_attribute_values"
+                                 constraintName="fk_org_unit_group_set_attribute_values_org_unit_group_sets_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="org_unit_group_set"/>
+        <addForeignKeyConstraint baseColumnNames="attribute_values_id"
+                                 baseTableName="org_unit_group_set_attribute_values"
+                                 constraintName="fk_org_unit_group_set_attribute_values_attribute_values_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="attribute_value"/>
+        
+    </changeSet>
+</databaseChangeLog>
